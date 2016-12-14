@@ -1,0 +1,8 @@
+<% @records.each do |record| %>
+  <p>Title: <%= record.title %></p>
+  <p>Artist: <%= record.artist %></p>
+  <img src="<%= record.cover_art %>">
+  <br>
+  <button> <%= link_to "Show", record_path(record) %> </button>
+  <button> <%= link_to "delete", record, method: :delete, data:{confirm: "Are you sure?"} %> </button>
+<% end %>
